@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Naveen Roy - Web Designer and Developer specializing in front-end technologies like React, HTML, CSS, and JavaScript.">
   
   <title>Naveen Roy</title>
@@ -202,6 +204,139 @@
     toggler.classList.toggle('active');
   }
 </script>
+
+<style>
+/* General Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px; /* Ensuring fixed height */
+}
+
+/* Ensure header-content doesn't stretch */
+/* Ensure header-content is centered properly */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+  padding: 0 20px;
+}
+
+/* Logo should stay aligned properly */
+.logo {
+  color: #f05a28;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  flex-shrink: 0; /* Prevents resizing */
+}
+
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f05a28;
+}
+
+/* Navbar Toggler Button */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  right: 15px; /* Prevent shifting */
+  top: 18px; /* Ensures it stays aligned */
+}
+
+/* Hamburger Menu Bars */
+.toggler-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    height: 60px; /* Ensuring it stays consistent */
+    padding: 10px;
+  }
+
+  .header-content {
+    padding: 0 10px;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+
+  .navbar-toggler {
+    display: flex;
+  }
+}
+
+</style>
+
+
+
 <style>
   
 </style>
@@ -218,13 +353,13 @@
       
       <!-- Social Media Icons -->
       <div class="social-icons mt-6 flex justify-center space-x-6">
-        <a href="https://www.linkedin.com/in/naveenroy" target="_blank" class="social-icon linkedin-icon text-2xl text-blue-600 hover:text-blue-800 transition duration-300">
+        <a href="www.linkedin.com/in/naveen-ponnapati-639926224" target="_blank" class="social-icon linkedin-icon text-2xl text-blue-600 hover:text-blue-800 transition duration-300">
           <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
         </a>
-        <a href="https://github.com/naveenroy" target="_blank" class="social-icon github-icon text-2xl text-gray-700 hover:text-gray-900 transition duration-300">
+        <a href="https://github.com/NavRoy/" target="_blank" class="social-icon github-icon text-2xl text-gray-700 hover:text-gray-900 transition duration-300">
           <i class="fab fa-github"></i> <!-- GitHub Icon -->
         </a>
-        <a href="https://www.instagram.com/naveenroy" target="_blank" class="social-icon instagram-icon text-2xl text-pink-600 hover:text-pink-800 transition duration-300">
+        <a href="https://www.instagram.com/naveeennnnnnnnnn/" target="_blank" class="social-icon instagram-icon text-2xl text-pink-600 hover:text-pink-800 transition duration-300">
           <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
           </a>
       </div>
@@ -455,9 +590,12 @@
         I believe in continuous learning and staying updated with the latest design trends, aiming to bring innovation and excellence to every project.
       </p>
       <div class="resume-button">
-        <button class="grad-btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-          Download my Resume
-        </button>
+        <a href="https://drive.google.com/file/d/1natX-BD8Mnskq3GzFassKRupZEFLpGed/view?usp=sharing" target="_blank">
+          <button class="grad-btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+            Download my Resume
+          </button>
+        </a>
+        
       </div>
     </div>
 
@@ -802,15 +940,100 @@
   }
 
   /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .portfolio .section-title {
-      font-size: 2.2rem;
-    }
-
-    .portfolio .section-description {
-      font-size: 1rem;
-    }
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .portfolio {
+    padding: 80px 15px;
   }
+
+  .portfolio .section-title {
+    font-size: 2.5rem;
+  }
+
+  .portfolio .section-description {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .portfolio-grid {
+    gap: 20px;
+  }
+
+  .portfolio-item {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 60px 10px;
+  }
+
+  .portfolio .section-title {
+    font-size: 2rem;
+  }
+
+  .portfolio .section-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .portfolio-item {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .portfolio-overlay {
+    padding: 15px;
+  }
+
+  .portfolio-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-link {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 50px 5px;
+  }
+
+  .portfolio .section-title {
+    font-size: 1.8rem;
+  }
+
+  .portfolio .section-description {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .portfolio-link {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+  }
+}
+
 
 </style>
 
@@ -851,7 +1074,7 @@
           <i class="bi bi-envelope flex-shrink-0"></i>
           <div>
             <h4>Email:</h4>
-            <p>Naveenponnapati099@gmail.com</p>
+            <p>naveenroy1940@gmail.com</p>
           </div>
         </div>
       </div>
@@ -1123,7 +1346,7 @@
   </div>
   <!-- Footer Bottom -->
   <div class="footer-bottom" data-aos="fade-up" data-aos-delay="900">
-    <p>&copy; 2024 NavRoy. Designed with ❤️. All Rights Reserved.</p>
+    <p>&copy; 2024 NavRoy. Designed with ❤️. All Rights Reserved | NR.</p>
   </div>
 </footer>
 
