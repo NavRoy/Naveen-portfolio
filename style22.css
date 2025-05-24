@@ -9,6 +9,10 @@
         top: 0;
         z-index: 10;
       }
+.main-wrapper {
+  overflow-x: hidden;
+}
+
       .header-content {
         display: flex;
         justify-content: space-between;
